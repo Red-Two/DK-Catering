@@ -47,8 +47,8 @@
 
 		<li>About
 			<ul>
-			<li><a href="<?php $template->dataInclusion("about/ourstory.php") ?>">Our Story</a></li>
-			<li><a href="<?php $template->dataInclusion("about/contactus.php" ?>">Contact Us</a></li>
+				<li><a href="<?php $template->dataInclusion("about/ourstory.php") ?>">Our Story</a></li>
+				<li><a href="<?php $template->dataInclusion("about/contactus.php" ?>">Contact Us</a></li>
 			</ul>
 		</li>        
 	</ul>
