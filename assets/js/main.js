@@ -1,4 +1,4 @@
-/* Web II - Group 2 */
+/* Web II Project 1 */
 
 /* Responsive Functions */
 var navTabs = document.getElementById('navTabs');
