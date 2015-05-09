@@ -1,7 +1,0 @@
-Options +Includes
-AddHandler server-parsed .html
-
-# Set the Route so assets and links work properly!
-# Relative and Absolute should work :D
-# Don't forget a trailing slash!
-SetEnv ROUTE "http://kelvin.ist.rit.edu/~emp5557/ISTE240/project1/"
