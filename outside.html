@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang='en'>
+	<!--#set var="pageTitle" value="Outside" -->
+	<!--#include virtual="assets/templates/head.html" -->
+
+	<body>
+		<div id="content">
+			<!--#include virtual="assets/templates/header.html" -->
+
+			<div id="pageWrapper" class="navMenu-collapsed">
+				<!--#set var="bbItem" value="indexBB" -->
+				<!--#include virtual="assets/templates/billboard.html" -->
+
+				<div id="pageContent">
+					<article>
+						<h2 class="contentHeader">Outside</h2>
+						<p>Here you will find the list of different parts of the outside area of our home. This is the place to go when
+						you want to go on an adventure, or simply relax on the deck. You can cook, play, and enjoy yourself while the
+						weather is warm. Being surrounded by happiness is good for you and these areas provide it greatly.</p>
+						<p><a href="<!--#echo var="ROUTE" -->areas/backyard.html">Backyard</a> - Where we go when it isn't freezing outside.</p>
+					</article>
+				</div>
+			</div>
+
+			<div class="breadcrumbs">
+				<ul class="crumbs">
+					<li><a href="<!--#echo var="ROUTE" -->index.html">Home</a></li>
+					<li><a href="<!--#echo var="ROUTE" -->outside.html">Outside</a></li>
+				</ul>
+			</div>
+
+			<!--#include virtual="assets/templates/footer.html" -->
+		</div>
+	</body>
+</html>

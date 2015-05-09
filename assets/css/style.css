@@ -1,0 +1,370 @@
+/* Global Styling */
+*
+{
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* List */
+ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li
+{
+	display: inline-block;
+}
+
+/* Link */
+a
+{
+	text-decoration: none;
+}
+
+/* Body */
+body
+{
+	background-color: #fafafa;
+
+	margin: 0;
+}
+
+/* Page Layout */
+#content
+{
+	max-width: 1100px;
+
+	background-color: #ffffff;
+	border-left: 1px solid #e2e2e2;
+	border-right: 1px solid #e2e2e2;
+
+	margin: 0 auto;
+
+	overflow: auto;
+}
+
+/* Billboard */
+#billboard
+{
+	max-height: 300px;
+    width: 100%;
+
+	overflow: hidden;
+}
+
+#billboard > img
+{
+	background-position: 50% center;
+	background-size: cover;
+
+	max-height: inherit;
+	min-height: 300px;
+	width: inherit;
+}
+
+/* Billboard Images */
+#billboard #indexBB
+{
+	background-image: url("../../assets/images/billboard/house.jpg");
+}
+#billboard #basementBB
+{
+	background-image: url("../../assets/images/billboard/basement.jpg");
+}
+#billboard #kitchenBB
+{
+	background-image: url("../../assets/images/billboard/kitchen.jpg");
+}
+#billboard #livingroomBB
+{
+	background-image: url("../../assets/images/billboard/livingroom.jpg");
+}
+#billboard #mainentranceBB
+{
+	background-image: url("../../assets/images/billboard/mainentrance.jpg");
+}
+#billboard #backyardBB
+{
+	background-image: url("../../assets/images/billboard/backyard.jpg");
+}
+#billboard #hallwayBB
+{
+	background-image: url("../../assets/images/billboard/hallway.jpg");
+}
+#billboard #spongebobbathroomBB
+{
+	background-image: url("../../assets/images/billboard/spongebobbathroom.jpg");
+}
+
+/* Navigation */
+nav
+{
+	background-color: #4A4E51;
+
+    height: 50px;
+    line-height: 30px;
+}
+
+nav ul > li
+{
+	float: left;
+}
+
+nav ul > li:hover,
+nav ul li > a:hover
+{
+	background-color: #e2e2e2;
+	color: #303030;
+
+	transition: all 0.2s ease;
+}
+
+nav ul li > a
+{
+	color: #FFFFFF;
+
+	display: block;
+	padding: 10px;
+}
+
+/* Navigation Menu */
+#navMenu
+{
+	color: #FFFFFF;
+
+	width: 43px;
+	height: inherit;
+
+	display: none;
+	padding: 8px;
+
+	font-size: 30px;
+
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	cursor: pointer;
+}
+
+/* Page Wrapper */
+#pageWrapper
+{
+	transition: all 0.2s ease;
+}
+
+/* Page Content */
+#pageContent
+{
+	margin: 10px;
+}
+
+/* Titles */
+.pageHeader
+{
+	margin: 0;
+	padding: 10px;
+
+	text-align: center;
+	line-height: 130px;
+
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.contentHeader
+{
+	margin: 10px 0;
+	padding: 10px;
+
+	border: 1px solid #e2e2e2;
+}
+
+/* Figure */
+figure.main
+{
+	max-width: 100%;
+
+	background: #e2e2e2;
+
+	display: block;
+
+	padding: 10px;
+	margin: 0 10px 10px 0;
+
+	text-align: center;
+
+	clear: both;
+}
+
+figure.left
+{
+	float: left;
+}
+
+figure.right
+{
+	float: right;
+}
+
+figure.main > img
+{
+	background-position: 50% center;
+	background-size: cover;
+	max-width: inherit;
+}
+
+/* Breadcrumbs */
+.breadcrumbs
+{
+	clear: both;
+
+	background-color: #e2e2e2;
+
+	min-height: 29px;
+	line-height: 29px;
+}
+
+.breadcrumbs .crumbs li
+{
+	height: inherit;
+}
+
+.breadcrumbs .crumbs li a
+{
+	color: #535353;
+
+	padding: 3px;
+}
+
+.breadcrumbs .crumbs li a:hover
+{
+	background-color: #4A4E51;
+	color: #FFFFFF;
+
+	transition: all 0.2s ease;
+}
+
+.breadcrumbs .crumbs > li:after
+{
+	content: " >";
+}
+
+.breadcrumbs .crumbs > li:first-child a
+{
+	font-weight: bold;
+}
+
+.breadcrumbs .crumbs > li:last-child a
+{
+	color: #303030;
+	font-weight: bold;
+}
+
+.breadcrumbs .crumbs > li a:last-child:hover
+{
+	color: #FFFFFF;
+}
+
+.breadcrumbs .crumbs > li:last-child:after
+{
+	content: "";
+}
+
+/* Copyright */
+#copyright
+{
+	color: #FFFFFF;
+
+	float: left;
+
+	padding: 10px;
+}
+
+/* Footer */
+footer
+{
+	clear: both;
+}
+
+#footerTabs
+{
+	float: right;
+}
+
+/* Media Queries (Responsive) */
+@media (max-width: 1100px)
+{
+	/* Content */
+	#content
+	{
+		border: none;
+	}
+}
+
+@media (max-width: 450px)
+{
+	/* Navigation */
+	#navTabs,
+	#navTabs[style]
+	{
+		display: none;
+	}
+
+	#navTabs li
+	{
+		float: none;
+		width: 100%;
+	}
+
+	#navTabs li a
+	{
+		color: #303030;
+	}
+
+	/* Navigation Menu */
+	#navMenu
+	{
+		display: block;
+	}
+
+	/* Titles */
+	.contentHeader
+	{
+		text-align: center;
+	}
+
+	/* Figure */
+	figure.main
+	{
+		width: 100%;
+
+		margin: 10px auto;
+	}
+
+	/* Copyright */
+	#copyright
+	{
+		width: 100%;
+		color: #303030;
+	}
+}
+
+@media (min-width: 450px)
+{
+	/*
+	 * This is just a fix when resizing the window and
+	 * the navigation menu is still on, it resets the
+	 * window for you.
+	*/
+	#navTabs[style]
+	{
+		display: block !important;
+	}
+
+	#pageWrapper[style]
+	{
+		padding-top: 0 !important;
+	}
+}

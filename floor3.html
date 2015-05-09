@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang='en'>
+	<!--#set var="pageTitle" value="Floor 3" -->
+	<!--#include virtual="assets/templates/head.html" -->
+
+	<body>
+		<div id="content">
+			<!--#include virtual="assets/templates/header.html" -->
+
+			<div id="pageWrapper" class="navMenu-collapsed">
+				<!--#set var="bbItem" value="indexBB" -->
+				<!--#include virtual="assets/templates/billboard.html" -->
+
+				<div id="pageContent">
+					<article>
+						<h2 class="contentHeader">Floor 3</h2>
+						<p>Here you will find the list of areas on the third floor of our home. After a long day we come up here to clean up
+						and sleep. It is a wonderful place to relax. Whether it's at night or at day, spending your time here resting is
+						invaluable and someone to look forward to after a long day.</p>
+						<p><a href="<!--#echo var="ROUTE" -->areas/hallway.html">Hallway</a> - Connects all rooms on the third floor to each other.</p>
+						<p><a href="<!--#echo var="ROUTE" -->areas/spongebobbathroom.html">Spongebob Bathroom</a> - No seriously, a Spongebob-themed bathroom.</p>
+					</article>
+				</div>
+			</div>
+
+			<div class="breadcrumbs">
+				<ul class="crumbs">
+					<li><a href="<!--#echo var="ROUTE" -->index.html">Home</a></li>
+					<li><a href="<!--#echo var="ROUTE" -->floor3.html">Floor 3</a></li>
+				</ul>
+			</div>
+
+			<!--#include virtual="assets/templates/footer.html" -->
+		</div>
+	</body>
+</html>
