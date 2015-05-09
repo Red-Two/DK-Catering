@@ -83,6 +83,7 @@ nav
 nav ul > li
 {
 	float: left;
+	height: auto;
 }
 
 nav ul > li:hover,
@@ -100,6 +101,7 @@ nav ul li > a
 
 	display: block;
 	padding: 10px;
+	padding-left: 0;
 }
 
 /* Navigation Menu */
@@ -121,6 +123,36 @@ nav ul li > a
 	cursor: pointer;
 }
 
+nav ul li 
+{
+	text-align: center;
+}
+
+nav ul li ul 
+{
+    position: absolute;
+    display: none;
+}
+
+nav a 
+{
+	border-bottom: none;
+}
+
+nav li:hover ul
+{
+	display: block;
+}
+
+nav ul li li
+{
+    font-size: .8em;
+}
+
+nav ul li ul li 
+{
+	display: block;
+}
 /* Page Wrapper */
 #pageWrapper
 {
