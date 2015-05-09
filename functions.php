@@ -1,14 +1,31 @@
 <?php
 
 /*
- * Constants
+ * Configuration
 */
-// Server Root
-define("_serverRoot_", dirname(__FILE__) . "/");
-// Website Root
-define("_websiteRoot_", (!empty($_SERVER["HTTPS"]) ? "https" : "http") . "://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER['REQUEST_URI']) . "/");
+
+// Website Root Folder (optional, INCLUDE TRAILING SLASH!)
+define("_websiteRootFolder_", "class/");
+
 // Main Website Name
 define("_name_", "DK-Recipe");
+
+/* ---------------------------------------
+ * ---------------------------------------
+ * DO NOT EDIT ANYTHING BELOW THIS LINE!!!
+ * ---------------------------------------
+ * ---------------------------------------
+*/
+
+/*
+ * Constants
+*/
+
+// Server Root
+define("_serverRoot_", dirname(__FILE__) . "/");
+
+// Website Root
+define("_websiteRoot_", (!empty($_SERVER["HTTPS"]) ? "https" : "http") . "://" . $_SERVER["HTTP_HOST"] . "/");
 
 /*
  * Global Variables
@@ -48,7 +65,7 @@ function getServerRoot()
 
 function getWebsiteRoot()
 {
-	return _websiteRoot_;
+	return _websiteRoot_ . _websiteRootFolder_;
 }
 
 function getName()
