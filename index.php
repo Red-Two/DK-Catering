@@ -1,17 +1,18 @@
-<?php require_once "functions.php"; ?>
+<?php require_once "library/Global.php"; ?>
+<?php $template = new Template(); ?>
 
 <!doctype html>
 
 <html lang='en'>
-	<?php setPageTitle("Home"); fileInclusion("assets/templates/head.php"); ?>
+	<?php $template->setPageTitle("Home"); $template->fileInclusion("assets/templates/head.php"); ?>
 
 	<body>
 		<div id="content">
 			
-			<?php fileInclusion("assets/templates/header.php"); ?>
+			<?php $template->fileInclusion("assets/templates/header.php"); ?>
 
 			<div id="pageWrapper" class="navMenu-collapsed">
-				<?php setBBItem("indexBB"); fileInclusion("assets/templates/billboard.php"); ?>
+				<?php $template->setBBItem("indexBB"); $template->fileInclusion("assets/templates/billboard.php"); ?>
 
 				<div id="pageContent">
 					<article>
@@ -35,7 +36,7 @@
 				</ul>
 			</div>
 
-			<?php fileInclusion("assets/templates/footer.php"); ?>
+			<?php $template->fileInclusion("assets/templates/footer.php"); ?>
 		</div>
 	</body>
 </html>

@@ -1,6 +1,8 @@
+<?php $template = new Template(); ?>
+
 <header>
 	<div class="pageHeader">
-		<h1><?php echo getName(); ?></h1>
+		<h1><?php echo $template->getName(); ?></h1>
 	</div>
 
 	<nav>

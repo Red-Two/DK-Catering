@@ -1,3 +1,5 @@
+<?php $template = new Template(); ?>
+
 <footer>
 	<nav>
 		<ul id="footerTabs">
@@ -10,4 +12,4 @@
 	</nav>
 </footer>
 
-<script type="text/javascript" src="<?php echo dataInclusion("assets/js/main.js"); ?>></script>
+<script type="text/javascript" src="<?php echo $template->dataInclusion("assets/js/main.js"); ?>></script>
