@@ -1,99 +1,79 @@
 <?php
 
-/*
- * Constants
-*/
-
-// Server Root
-define("_serverRoot_", dirname(__FILE__) . "/");
-
-// Website Root
-define("_websiteRoot_", (!empty($_SERVER["HTTPS"]) ? "https" : "http") . "://" . $_SERVER["HTTP_HOST"] . "/");
-
 class Template
 {
 	/*
 	 * Global Variables
 	*/
-	private $pageTitle = null;
-	private $bbItem = null;
-
-	/*
-	 * File Routing (Inclusion)
-	 * Used to include PHP files.
-	*/
-	public function fileInclusion($file)
-	{
-		$include = $this->getServerRoot() . $file;
-
-		include $include;
-	}
-
-	/*
-	 * Data Routing (Inclusion)
-	 * Used for html, images, CSS, JS, etc...
-	*/
-	public function dataInclusion($data)
-	{
-		$uri = $this->getWebsiteRoot() . $data;
-
-		return $uri;
-	}
-
-	/*
-	 * Remove "library" extension
-	*/
-	public function removeLibrary($string)
-	{
-		return str_replace("library/", "", $string);
-	}
+	protected $controllerData = array();
 
 	/*
 	 * Accessors
 	*/
-	public function getServerRoot()
+	public function getData($key)
 	{
-		return $this->removeLibrary(_serverRoot_);
-	}
-
-	public function getWebsiteRoot()
-	{
-		return $this->removeLibrary(_websiteRoot_) . _websiteRootFolder_;
-	}
-
-	public function getName()
-	{
-		return _name_;
-	}
-
-	public function getPageTitle()
-	{
-		global $pageTitle;
-
-		return $pageTitle;
-	}
-
-	public function getBBItem()
-	{
-		global $bbItem;
-
-		return $bbItem;
+		return $this->controllerData[$key];
 	}
 
 	/*
 	 * Mutators
 	*/
-	public function setPageTitle($_pageTitle)
+	public function setData($key, $value)
 	{
-		global $pageTitle;
-
-		$pageTitle = $_pageTitle;
+		$this->controllerData[$key] = $value;
 	}
 
-	public function setBBItem($_bbItem)
+	/*
+	 * Include File
+	*/
+	public function includeFile($file)
 	{
-		global $bbItem;
+		$helper = new Helper();
 
-		$bbItem = $_bbItem;
+		$this->controllerData[] = $helper::fileInclusion($file);
+
+		$this->output($file);
+	}
+
+	/*
+	 *	Include Data
+	*/
+	public function includeData($data)
+	{
+		$helper = new Helper();
+
+		return $helper::dataInclusion($data);
+	}
+
+	/*
+	 * Render Template
+	*/
+	public function render($template)
+	{
+		if (!file_exists($template))
+		{
+			echo "Template " . $template . " doesn't exist.";
+			exit();
+		}
+
+		$this->output($template);
+	}
+
+	/*
+	 * Output Template
+	*/
+	private function output($file)
+	{
+		$helper = new Helper();
+		extract(get_object_vars($helper), EXTR_REFS);
+
+		extract($this->controllerData);
+
+		ob_start();
+		include_once($file);
+		$output = ob_get_contents();
+		ob_end_clean();
+
+		echo $output;
 	}
 }
