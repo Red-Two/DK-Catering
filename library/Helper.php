@@ -27,7 +27,7 @@ class Helper
 	*/
 	public static function route($link)
 	{
-		return self::getWebsiteRoot() . "?p=" . $link;
+		return self::getWebsiteRoot() . "index.php?p=" . $link;
 	}
 
 	/*
