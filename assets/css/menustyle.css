@@ -1,0 +1,31 @@
+#foodpics{
+	float: left;
+	height: 50%;
+	width: 25%;
+}
+#foodpics img{
+	padding-top: 50px;
+}
+
+#description{
+	padding: 0 400px 0 450px;
+	width: 20%;
+}
+#description p{
+	padding-top: 100px;
+}
+
+#orderform{
+	float: right;
+	padding-top: 80px;
+}
+
+#orderform p input{
+	display: inline;
+	margin-right: 200px;
+}
+
+#orderupdate{
+	float: right;
+	margin: 100px 100px 0 0;=
+}
