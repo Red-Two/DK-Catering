@@ -3,8 +3,6 @@
 <footer>
 	<nav>
 		<ul id="footerTabs">
-			<li><a href="information/grading.html">Grading</a></li>
-			<li><a href="information/references.html">References</a></li>
 			<li><a href="#">&#8593;</a></li>
 		</ul>
 
@@ -12,4 +10,5 @@
 	</nav>
 </footer>
 
-<script type="text/javascript" src="<?php echo $helper->dataInclusion("assets/js/main.js"); ?>></script>
+<script type="text/javascript" src="<?php echo $helper->dataInclusion("assets/js/main.js"); ?>"></script>
+<script type="text/javascript" src="<?php echo $helper->dataInclusion("assets/js/validate.js"); ?>"></script>

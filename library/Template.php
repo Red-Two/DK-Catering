@@ -36,7 +36,7 @@ class Template
 	}
 
 	/*
-	 *	Include Data
+	 * Include Data
 	*/
 	public function includeData($data)
 	{

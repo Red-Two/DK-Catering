@@ -61,13 +61,15 @@ class Application
 			}
 			else
 			{
-				call_user_func(array(new Controller_Error(), "actionIndex"));
+				//call_user_func(array(new Controller_Error(), "actionIndex"));
+				call_user_func(array(new Controller_Index(), "actionIndex"));
 				exit();
 			}
 		}
 		else
 		{
-			call_user_func(array(new Controller_Error(), "actionIndex"));
+			//call_user_func(array(new Controller_Error(), "actionIndex"));
+			call_user_func(array(new Controller_Index(), "actionIndex"));
 			exit();
 		}
 	}

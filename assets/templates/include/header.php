@@ -10,10 +10,11 @@
 
 		<ul id="navTabs">
 			<li>
-				<a href="index.html">Home</a>
+				<a href="<?php echo $helper->route("index"); ?>">Home</a>
 			</li>
 
-			<li>Menu
+			<li>
+				<a href="<?php echo $helper->route("menu"); ?>">Menu</a>
 				<ul>
 					<li><a href="<?php echo $helper->route("menu/breakfast"); ?>">Breakfast</a></li>
 					<li><a href="<?php echo $helper->route("menu/lunch"); ?>">Lunch</a></li>
@@ -23,7 +24,8 @@
 				</ul>
 			</li>
 
-			<li>Catering
+			<li>
+				<a href="<?php echo $helper->route("catering"); ?>">Catering</a>
 				<ul>
 					<li><a href="<?php echo $helper->route("catering/events"); ?>">Events</a></li>
 					<li><a href="<?php echo $helper->route("catering/testimonials"); ?>">Testimonials</a></li>
@@ -31,21 +33,24 @@
 				</ul>
 			</li>
 
-			<li>Recipes
+			<li>
+				<a href="<?php echo $helper->route("recipes"); ?>">Recipes</a>
 				<ul>
 					<li><a href="<?php echo $helper->route("recipes/ours"); ?>">Our Recipes</a></li>
 					<li><a href="<?php echo $helper->route("recipes/yours"); ?>">Your Recipes</a></li>
 				</ul>
 			</li>
 
-			<li>Community
+			<li>
+				<a href="<?php echo $helper->route("community"); ?>">Community</a>
 				<ul>
 					<li><a href="<?php echo $helper->route("community/forums"); ?>">Forums</a></li>
 					<li><a href="<?php echo $helper->route("community/reviews"); ?>">Reviews</a></li>
 				</ul>
 			</li>
 
-			<li>About
+			<li>
+				<a href="<?php echo $helper->route("catering"); ?>">About</a>
 				<ul>
 					<li><a href="<?php echo $helper->route("about/ourstory"); ?>">Our Story</a></li>
 					<li><a href="<?php echo $helper->route("about/contactus"); ?>">Contact Us</a></li>
