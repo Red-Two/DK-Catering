@@ -102,11 +102,18 @@ body
 	background-image: url("../../assets/images/billboard/test.png");
 }
 
+/* Feed */
+#feed 
+{
+	float: left;
+	padding-right: 10px;
+}
+
 /* Navigation */
 nav
 {
-	background-color: #4A4E51;
-
+	background-color: #33ccff;
+    border: 1px solid black;
     height: 50px;
     line-height: 30px;
 }
@@ -115,24 +122,49 @@ nav ul > li
 {
 	float: left;
 	height: auto;
+	text-align: center;
+	padding-right: 5px;
+	padding-left: 5px;
 }
 
 nav ul > li:hover,
 nav ul li > a:hover
 {
-	background-color: #e2e2e2;
-	color: #303030;
+	background-color: #33ffff;
+	color: #333333;
 
 	transition: all 0.2s ease;
 }
 
 nav ul li > a
 {
-	color: #FFFFFF;
-
+	color: #333333;
 	display: block;
 	padding: 10px;
 	padding-left: 0;
+}
+
+nav ul li ul 
+{
+    position: absolute;
+    display: none;
+    background-color: #33ccff;
+}
+
+nav a 
+{
+	border-bottom: none;
+}
+
+nav ul > li:hover ul
+{
+	display: block;
+	border: 1px solid black;
+}
+
+nav ul li li
+{
+    font-size: 1em;
 }
 
 /* Navigation Menu */
@@ -154,36 +186,6 @@ nav ul li > a
 	cursor: pointer;
 }
 
-nav ul li 
-{
-	text-align: center;
-}
-
-nav ul li ul 
-{
-    position: absolute;
-    display: none;
-}
-
-nav a 
-{
-	border-bottom: none;
-}
-
-nav li:hover ul
-{
-	display: block;
-}
-
-nav ul li li
-{
-    font-size: .8em;
-}
-
-nav ul li ul li 
-{
-	display: block;
-}
 /* Page Wrapper */
 #pageWrapper
 {
@@ -382,6 +384,12 @@ footer
 	{
 		width: 100%;
 		color: #303030;
+	}
+
+	/* Feed */
+	#feed
+	{
+        display: none;
 	}
 }
 
